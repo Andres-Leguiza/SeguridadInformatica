@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;900&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Poppins', sans-serif;
+	background-image: url(../img/headerBack2.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.grid__layout {
+	display: grid;
+	grid-template-columns: repeat(3,33.3%);
+	grid-template-areas: 
+	"header header header"
+	"hero hero hero"
+	"footer footer footer";
+}
+
+
+/* Header */
+
+.header {
+	grid-area: header;
+	margin: 0.5rem 1rem;
+	display: flex;
+	justify-content: space-between;
+}
+
+.header ul {
+	display: flex;
+	list-style: none;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header ul li {
+	margin: 0 1rem;
+}
+
+.header ul li a {
+	text-decoration: none;
+	font-size: 1rem;
+	font-weight: 600;
+	color: #f17f5bcc;
+}
+
+.header__logo img {
+	width: 3rem;
+}
+
+/* Contenido */
+
+.hero {
+	grid-area: hero;
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 100vh;
+	justify-content: center;
+	background-image: url(../img/security-back.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 100%;
+	position: relative;
+	padding-top: 2rem;
+}
+
+.hero__articulos {
+	max-width: 80%;
+	margin: 0.5rem;
+	color: #fafafa;
+	border: solid 2px;
+	border-color: cadetblue;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.hero__articulos h3 {
+	font-weight: 600;
+	font-size: 1.2rem;
+	margin: 1rem 0;
+	text-align: center;
+}
+
+.hero__articulos p {
+	text-align: justify;
+	margin: 0 1rem;
+}
+
+/* Footer */
+
+.footer {
+	grid-area: footer;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 1.5rem 2rem;
+}
+
+.footer ul {
+	display:  flex;
+	list-style: none;
+}
+
+.footer li a,  .footer__contacto {
+	display:  flex;
+	text-decoration: none;
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: #bf78ff;
+	margin: 0 0.5rem;
+}
+
+.footer__contacto img {
+	margin-right: 1rem;
+}
+
+.footer img {
+	width: 2rem;
+}
+
+.stickyWhatsapp img {
+	z-index: 100;
+	position: fixed;
+	width: 3rem;
+	right: 1rem;
+	bottom: 5rem;
+}
+
+
+@media all and (min-width: 768px) {
+	.header {
+		margin: 0.5rem 2rem;
+	}
+
+	.header ul li a {
+		font-size: 1.3rem;
+	}
+
+	.header__logo img {
+		width: 4rem;
+	}
+
+	.hero {
+		padding-top: 3rem;
+	}
+
+	.hero__articulos {
+		margin: 2rem 1.5rem;
+		max-width: 30%;
+	}
+
+	.hero__articulos h3 {
+		font-size: 2rem;
+	}
+
+	.stickyWhatsapp img {
+		width: 3.5rem;
+	}
+
+	.footer {
+		margin: 1rem;
+	}
+
+	.footer__contacto {
+		font-size: 1.2rem;
+		font-weight: 600;
+	}
+
+	.footer__contacto img {
+		margin-right: 0.5rem;
+	}
+}
